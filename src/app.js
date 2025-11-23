@@ -1,12 +1,6 @@
-const express = require("express");
-const cors = require("cors");
-const imageRoutes = require("./src/routes/imageRoutes.js");
+import express from 'express'
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+const app = express()
 
-app.use("/uploads", express.static("public/uploads"));
-app.use("/api", imageRoutes);
+app.use(express.json())
 
-module.exports = app;
